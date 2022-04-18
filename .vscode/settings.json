@@ -2,7 +2,20 @@
   "files.associations": {
     "string": "cpp",
     "stack": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "iosfwd": "cpp",
+    "__bit_reference": "cpp",
+    "__hash_table": "cpp",
+    "__split_buffer": "cpp",
+    "__tree": "cpp",
+    "array": "cpp",
+    "deque": "cpp",
+    "initializer_list": "cpp",
+    "list": "cpp",
+    "set": "cpp",
+    "string_view": "cpp",
+    "unordered_map": "cpp",
+    "iterator": "cpp"
   },
   "C_Cpp.errorSquiggles": "Disabled"
 }

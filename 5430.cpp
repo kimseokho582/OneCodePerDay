@@ -41,7 +41,7 @@ string operatorArr(vector<int> v, string order)
         }
         else
         {
-            if (f >= b)
+            if (f > b)
             {
                 return "error";
             }
