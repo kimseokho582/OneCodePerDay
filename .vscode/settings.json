@@ -15,7 +15,8 @@
     "set": "cpp",
     "string_view": "cpp",
     "unordered_map": "cpp",
-    "iterator": "cpp"
+    "iterator": "cpp",
+    "iostream": "cpp"
   },
   "C_Cpp.errorSquiggles": "Disabled"
 }
