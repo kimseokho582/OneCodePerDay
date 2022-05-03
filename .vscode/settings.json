@@ -17,7 +17,8 @@
     "unordered_map": "cpp",
     "iterator": "cpp",
     "iostream": "cpp",
-    "ios": "cpp"
+    "ios": "cpp",
+    "algorithm": "cpp"
   },
   "C_Cpp.errorSquiggles": "Disabled"
 }
