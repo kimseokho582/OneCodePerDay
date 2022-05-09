@@ -16,6 +16,9 @@ bool check(int n)
 
 int main()
 {
+    cin.tie(NULL);
+    cout.tie(NULL);
+    ios_base ::sync_with_stdio(false);
     int num = 1;
     int x, y;
     bool flag = false;
