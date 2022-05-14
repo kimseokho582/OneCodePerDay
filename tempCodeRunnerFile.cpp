@@ -1,2 +1,2 @@
 
-            int next = v[now][i];
+                ans = max(ans, table[i][j]);
