@@ -18,7 +18,8 @@
     "iterator": "cpp",
     "iostream": "cpp",
     "ios": "cpp",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "queue": "cpp"
   },
   "C_Cpp.errorSquiggles": "Disabled"
 }
