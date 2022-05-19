@@ -3,6 +3,12 @@
 using namespace std;
 
 int table[1001][1001];
+int dir[4][2] = {
+    {1, 0},
+    {-1, 0},
+    {0, 1},
+    {0, -1},
+};
 queue<pair<int, int> > check;
 int ans = 0;
 
@@ -41,32 +47,20 @@ int main()
             y = check.front().second;
             check.pop();
 
-            if (x - 1 >= 0 && table[x - 1][y] == 0)
+            for (int i = 0; i < 4; i++)
             {
-                table[x - 1][y] = 1;
-                check.push(make_pair(x - 1, y));
-                zeroCnt--;
-            }
+                int nx = x + dir[i][0];
+                int ny = y + dir[i][1];
 
-            if (x + 1 < N && table[x + 1][y] == 0)
-            {
-                table[x + 1][y] = 1;
-                check.push(make_pair(x + 1, y));
-                zeroCnt--;
-            }
-
-            if (y - 1 >= 0 && table[x][y - 1] == 0)
-            {
-                table[x][y - 1] = 1;
-                check.push(make_pair(x, y - 1));
-                zeroCnt--;
-            }
-
-            if (y + 1 < M && table[x][y + 1] == 0)
-            {
-                table[x][y + 1] = 1;
-                check.push(make_pair(x, y + 1));
-                zeroCnt--;
+                if (0 <= nx && nx < N && 0 <= ny && ny < M)
+                {
+                    if (table[nx][ny] == 0)
+                    {
+                        check.push({nx, ny});
+                        table[nx][ny] = 1;
+                        zeroCnt--;
+                    }
+                }
             }
         }
         ans++;
