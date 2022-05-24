@@ -1,2 +1,2 @@
 
-    cin >> n;
+        ans = max(ans, num);
