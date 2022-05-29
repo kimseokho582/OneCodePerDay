@@ -1,2 +1,1 @@
 
-        ans = max(ans, num);
