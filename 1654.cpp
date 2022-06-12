@@ -21,7 +21,7 @@ int main()
 {
 
     cin >> n >> m;
-    long long r = 0, l = 0, ans = 0;
+    long long r = 0, l = 1, ans = 0;
     for (int i = 0; i < n; i++)
     {
         cin >> table[i];
@@ -29,7 +29,7 @@ int main()
     }
     while (l <= r)
     {
-        int mid = (l + r) / 2;
+        long long mid = (l + r) / 2;
         if (calc(mid))
         {
             ans = mid;
