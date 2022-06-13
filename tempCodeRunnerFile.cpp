@@ -1,2 +1,2 @@
 
-            check[i] = 1;
+        if (calc(mid))
