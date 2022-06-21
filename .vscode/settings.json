@@ -19,7 +19,9 @@
     "iostream": "cpp",
     "ios": "cpp",
     "algorithm": "cpp",
-    "queue": "cpp"
+    "queue": "cpp",
+    "memory": "cpp",
+    "utility": "cpp"
   },
   "C_Cpp.errorSquiggles": "Disabled"
 }

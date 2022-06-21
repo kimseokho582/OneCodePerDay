@@ -1,1 +1,0 @@
-cout << S.top() << " " << L.top() << endl;
