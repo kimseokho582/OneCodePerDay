@@ -41,7 +41,7 @@ bool calc(int fuel)
                         double rest = sqrt(pow(10000 - v[j].first, 2) + pow(10000 - v[j].second, 2));
                         if (rest <= fuel)
                         {
-                            // cout << fuel << " " << rest << "  " << cnt << endl;
+
                             return true;
                         }
                         q.push(j);
