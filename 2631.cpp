@@ -19,9 +19,9 @@ int main()
         LIS[i] = 1;
         for (int j = 0; j < i; j++)
         {
-            if (table[i] > table[j] && LIS[i] < LIS[j] + 1)
+            if (table[i] > table[j])
             {
-                LIS[i]++;
+                LIS[i] = max(LIS[i], LIS[j] + 1);
             }
         }
         large = max(large, LIS[i]);
