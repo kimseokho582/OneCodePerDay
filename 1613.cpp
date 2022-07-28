@@ -1,21 +1,20 @@
 #include <iostream>
 #include <algorithm>
-int table[101][101] = {
-    0,
-};
-
 using namespace std;
+
+int table[401][401];
+
 int main()
 {
     int n, m;
     cin >> n >> m;
-
     for (int i = 0; i < m; i++)
     {
-        int x, y;
-        cin >> x >> y;
-        table[x][y] = 1;
+        int a, b;
+        cin >> a >> b;
+        table[a][b] = 1;
     }
+
     for (int q = 1; q <= n; q++)
     {
         for (int i = 1; i <= n; i++)
@@ -29,15 +28,23 @@ int main()
             }
         }
     }
-
-    for (int i = 1; i <= n; i++)
+    int t;
+    cin >> t;
+    for (int i = 0; i < t; i++)
     {
-        int ans = 0;
-        for (int j = 1; j <= n; j++)
+        int a, b;
+        cin >> a >> b;
+        if (table[a][b] == 1)
         {
-            if (!table[i][j] && !table[j][i])
-                ans++;
+            cout << -1 << "\n";
         }
-        cout << ans - 1 << "\n";
+        else if (table[b][a] == 1)
+        {
+            cout << 1 << "\n";
+        }
+        else
+        {
+            cout << 0 << "\n";
+        }
     }
 }
