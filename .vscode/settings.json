@@ -23,7 +23,9 @@
     "memory": "cpp",
     "utility": "cpp",
     "cmath": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "chrono": "cpp",
+    "complex": "cpp"
   },
   "C_Cpp.errorSquiggles": "Disabled"
 }

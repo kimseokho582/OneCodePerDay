@@ -1,2 +1,2 @@
 
-            else
+        int r = n - 1;
