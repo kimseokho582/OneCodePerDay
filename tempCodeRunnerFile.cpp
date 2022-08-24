@@ -1,2 +1,3 @@
-
-        int r = n - 1;
+void dfs(int now)
+// {
+// }
