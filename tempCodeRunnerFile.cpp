@@ -1,3 +1,3 @@
-void dfs(int now)
-// {
-// }
+
+    int n;
+    cin >> n;
