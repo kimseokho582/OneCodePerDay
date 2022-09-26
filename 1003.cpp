@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-int cnt0, cnt1;
 int table[41] = {
     0,
     1,
@@ -24,6 +23,10 @@ int fibonacci(int n)
 
 int main()
 {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
     int n;
     cin >> n;
 
