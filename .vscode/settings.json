@@ -25,7 +25,9 @@
     "cmath": "cpp",
     "ostream": "cpp",
     "chrono": "cpp",
-    "complex": "cpp"
+    "complex": "cpp",
+    "ratio": "cpp",
+    "cstring": "cpp"
   },
   "C_Cpp.errorSquiggles": "Disabled"
 }
