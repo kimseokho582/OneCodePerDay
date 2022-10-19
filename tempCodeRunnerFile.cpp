@@ -1,1 +1,2 @@
 
+        cin >> table[i];
