@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 #include <cstring>
 #include <cmath>
 using namespace std;
@@ -24,6 +23,8 @@ int main()
     for (int i = 1; i < n; i++)
     {
         int diff = 0;
+        int idx = -1;
+        int flag = 0;
         string tmp;
         cin >> tmp;
         for (int i = 0; i < tmp.length(); i++)
@@ -35,15 +36,26 @@ int main()
         {
             if (mainStr[i] != cmpStr[i])
             {
-                diff++;
+                if (idx == -1)
+                    idx = i;
+                if (mainStr[i] - cmpStr[i] > 1 || mainStr[i] - cmpStr[i] < -1)
+                    flag = 1;
+                else
+                {
+                    diff++;
+                    if (diff == 2)
+                    {
+                        if ((mainStr[idx] + mainStr[i]) != (cmpStr[idx] + cmpStr[i]))
+                            flag = 1;
+                    }
+                    if (diff >= 3)
+                        flag = 1;
+                }
             }
         }
-
-        memset(cmpStr, 0, sizeof(cmpStr));
-        if (str.length() - tmp.length() > 2 || str.length() - tmp.length() < -2)
-            continue;
-        if (diff < 3)
+        if (flag == 0)
             ans++;
+        memset(cmpStr, 0, sizeof(cmpStr));
     }
     cout << ans;
 }
