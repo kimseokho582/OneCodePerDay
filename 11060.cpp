@@ -1,41 +1,50 @@
 #include <iostream>
-#include <vector>
-#include <queue>
-
+#include <cstring>
+#include <algorithm>
 using namespace std;
 
-int n;
-int table[1001];
+int DP[1010] = {
+    0,
+};
+
 int main()
 {
-    cin >> n;
-    for (int i = 0; i < n; i++)
+    int N;
+
+    cin >> N;
+
+    DP[1] = 1;
+    for (int i = 1; i <= N; ++i)
     {
-        cin >> table[i];
-    }
+        int num;
+        cin >> num;
 
-    queue<pair<int, int>> q;
-    q.push(make_pair(0, 0));
-
-    while (q.empty() == 0)
-    {
-        int Cur = q.front().first;
-        int Cnt = q.front().second;
-        q.pop();
-
-        if (Cur == n - 1)
+        if (DP[i] == 0)
         {
-            cout << Cnt << endl;
             break;
         }
 
-        int S = table[Cur];
-        for (int i = 1; i <= S; i++)
+        for (int j = 1; j <= num; ++j)
         {
-            int Next = Cur + i;
-
-            q.push(make_pair(Next, Cnt + 1));
+            if (i + j > 1000)
+            {
+                break;
+            }
+            if (DP[i + j] > DP[i] + 1 || DP[i + j] == 0)
+            {
+                DP[i + j] = DP[i] + 1;
+            }
         }
     }
-    cout << -1 << endl;
+
+    if (DP[N] == 0)
+    {
+        cout << -1 << endl;
+    }
+    else
+    {
+        cout << DP[N] - 1 << endl;
+    }
+
+    return 0;
 }
