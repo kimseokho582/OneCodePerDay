@@ -1,21 +1,24 @@
 #include <iostream>
-
+#include <algorithm>
 using namespace std;
 
 int main()
 {
-    int n;
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    int n, cnt = 0;
     cin >> n;
-    int ans = 0;
-    while (n > 0)
+    while (!(n % 5 == 0 || n <= 0))
     {
-        if (!(n % 5))
-        {
-            cout << n / 5 + ans;
-            return 0;
-        }
-        ans++;
         n -= 2;
+        cnt++;
     }
-    cout << -1;
+    if (n < 0)
+    {
+        cout << "-1";
+        return 0;
+    }
+    cout << n / 5 + cnt;
 }
