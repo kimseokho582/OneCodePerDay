@@ -1,2 +1,14 @@
 
-            cout << 1 << " " << x1 << " " << y1 << x2 << " " << y2 << "\n";
+            if (isFisrt)
+            {
+                ans = i - 4000;
+                isFisrt = false;
+            }
+        }
+        if (table[i] > most)
+        {
+            most = table[i];
+            ans = i - 4000;
+            isFisrt = true;
+        }
+    }
