@@ -1,2 +1,2 @@
 
-                q.push({x, y + 1});
+            visited[i] = true;
