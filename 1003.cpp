@@ -39,7 +39,7 @@ int main()
         else
         {
             fibonacci(num);
-            cout << table[num - 1] << " " << table[num] << "\n";
+            cout << table[num - 1] << " " << table[num] << '\n';
         }
     }
 }
